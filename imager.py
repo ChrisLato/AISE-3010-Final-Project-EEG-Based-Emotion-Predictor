@@ -2,6 +2,7 @@ import numpy as np
 import pickle
 from sklearn.preprocessing import MinMaxScaler
 import load_data  
+import os
 
 def transform(dataset, weight=1.2):
     """
@@ -69,7 +70,11 @@ def main():
     for i in range(min(5, len(test_imgs))):  
         print(f"Image {i+1} shape: {test_imgs[i].shape}, Label: {test_labels[i]}")
     print(test_imgs.shape)
-
+    
+    # Check if the 'data' directory exists, create it if it doesn't
+    if not os.path.exists('./data'):
+        os.makedirs('./data')
+    
     # Save the transformed and shuffled training data
     with open('./data/train_images.pkl', 'wb') as f:
         pickle.dump({'data': train_imgs, 'label': train_labels}, f)
