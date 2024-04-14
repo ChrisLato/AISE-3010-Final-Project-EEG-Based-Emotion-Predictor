@@ -4,11 +4,11 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 import numpy as np
-from imager import convert_to_images  # Ensure this matches your project structure
-import load_data  # Ensure this matches your project structure
+from imager import convert_to_images  
+import load_data  
 
 # Hyperparameters
-EPOCHS = 25
+EPOCHS = 15
 BATCH_SIZE = 128
 LEARNING_RATE = 0.001
 NUM_CLASSES = 3
@@ -136,4 +136,3 @@ def train_model():
 
 if __name__ == "__main__":
     trained_model = train_model()
-    # The trained model is now available for further operations

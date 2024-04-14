@@ -21,7 +21,7 @@ def transform(dataset, weight=1.2):
     im[8, 2:7] = dataset[57:62]
 
     # Apply weighting to specified indices
-    for i in [3, 4, 5, 6]:
+    for i in [2, 3, 4, 5, 6, 7]:
         im[i, [0, 8]] *= weight
     
     return im.reshape(9, 9, 1)

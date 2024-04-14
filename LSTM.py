@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import load_data
 
 # Hyperparameters
-LEARNING_RATE = 0.0005  # Adjusted learning rate
+LEARNING_RATE = 0.0005  
 BATCH_SIZE = 32         
 EPOCHS = 25
 NUM_CLASSES = 3
@@ -113,4 +113,3 @@ def evaluate_model(model, loader):
 
 if __name__ == "__main__":
     trained_model = train_model()
-    # The trained model is now available for further operations
